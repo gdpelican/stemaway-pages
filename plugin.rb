@@ -7,7 +7,7 @@
 
 after_initialize do
   Discourse::Application.routes.prepend do
-    get "/static/about" => "static#about"
+    get "/static/:username" => "static#about"
   end
 
   class ::StaticController < ApplicationController
